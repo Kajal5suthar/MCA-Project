@@ -23,10 +23,9 @@ class List_view extends StatelessWidget {
         body: ListView(
           children: <Widget>[
             ListTile(
-//              leading: Icon(Icons.map),
-//              title: Text('Map'),
-
-                ),
+              leading: Icon(Icons.map),
+              title: Text('Map'),
+            ),
             ListTile(
               leading: Icon(Icons.apps),
               title: Text('Album'),
