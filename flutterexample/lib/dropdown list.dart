@@ -25,9 +25,9 @@ class DropDown_List_State extends State<DropDown_List> {
     return items;
   }
 
-  void changedDropDownItem(String selectedName) {
+  void changedDropDownItem(String selectedName1) {
     setState(() {
-      selectedName = selectedName;
+      selectedName = selectedName1;
     });
   }
 
