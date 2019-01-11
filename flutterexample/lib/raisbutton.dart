@@ -6,9 +6,13 @@ import 'package:flutterexample/gridview.dart';
 import 'package:flutterexample/homedrawer.dart';
 import 'package:flutterexample/listview.dart';
 import 'package:flutterexample/load%20screen.dart';
+import 'package:flutterexample/menubar.dart';
 import 'package:flutterexample/navigationbar.dart';
 import 'package:flutterexample/press%20button.dart';
 import 'package:flutterexample/radiobutton.dart';
+import 'package:flutterexample/rating.dart';
+import 'package:flutterexample/rotationAnimation.dart';
+import 'package:flutterexample/scale%20animation.dart';
 import 'package:flutterexample/sliderscreen/sliderscreen.dart';
 import 'package:flutterexample/snackbar.dart';
 import 'package:flutterexample/switchprogram.dart';
@@ -326,6 +330,137 @@ class Rais_ButtonState extends State<Rais_Button> {
                                                                           Switchmenu()));
                                                         }),
                                                   )),
+                                            ]),
+                                        new Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: <Widget>[
+                                              new Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: <Widget>[
+                                                    Expanded(
+                                                        flex: 5,
+                                                        child: Container(
+                                                          margin:
+                                                              EdgeInsets.only(
+                                                                  left: 5.0),
+                                                          child:
+                                                              new RaisedButton(
+                                                                  padding:
+                                                                      const EdgeInsets
+                                                                              .all(
+                                                                          9.0),
+                                                                  textColor:
+                                                                      Colors
+                                                                          .white,
+                                                                  color: Colors
+                                                                      .green,
+                                                                  child: Text(
+                                                                      'Menu bar'),
+                                                                  onPressed:
+                                                                      () {
+                                                                    Navigator.push(
+                                                                        context,
+                                                                        MaterialPageRoute(
+                                                                            builder: (context) =>
+                                                                                MenuBar()));
+                                                                  }),
+                                                        )),
+                                                    Expanded(
+                                                        flex: 5,
+                                                        child: Container(
+                                                          margin:
+                                                              EdgeInsets.only(
+                                                                  left: 5.0),
+                                                          child:
+                                                              new RaisedButton(
+                                                                  padding:
+                                                                      const EdgeInsets
+                                                                              .all(
+                                                                          9.0),
+                                                                  textColor:
+                                                                      Colors
+                                                                          .white,
+                                                                  color: Colors
+                                                                      .green,
+                                                                  child: Text(
+                                                                      'Rating bar'),
+                                                                  onPressed:
+                                                                      () {
+                                                                    Navigator.push(
+                                                                        context,
+                                                                        MaterialPageRoute(
+                                                                            builder: (context) =>
+                                                                                Rating()));
+                                                                  }),
+                                                        )),
+                                                    Expanded(
+                                                        flex: 5,
+                                                        child: Container(
+                                                          margin:
+                                                              EdgeInsets.only(
+                                                                  left: 5.0),
+                                                          child:
+                                                              new RaisedButton(
+                                                                  padding:
+                                                                      const EdgeInsets
+                                                                              .all(
+                                                                          9.0),
+                                                                  textColor:
+                                                                      Colors
+                                                                          .white,
+                                                                  color: Colors
+                                                                      .green,
+                                                                  child: Text(
+                                                                      'Animation'),
+                                                                  onPressed:
+                                                                      () {
+                                                                    Navigator.push(
+                                                                        context,
+                                                                        MaterialPageRoute(
+                                                                            builder: (context) =>
+                                                                                Rotation()));
+                                                                  }),
+                                                        )),
+                                                  ]),
+                                              new Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  children: <Widget>[
+                                                    new Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .center,
+                                                        children: <Widget>[
+                                                          Expanded(
+                                                              flex: 5,
+                                                              child: Container(
+                                                                margin: EdgeInsets
+                                                                    .only(
+                                                                        left:
+                                                                            5.0),
+                                                                child:
+                                                                    new RaisedButton(
+                                                                        padding:
+                                                                            const EdgeInsets.all(
+                                                                                9.0),
+                                                                        textColor:
+                                                                            Colors
+                                                                                .white,
+                                                                        color: Colors
+                                                                            .green,
+                                                                        child: Text(
+                                                                            'Scale animation'),
+                                                                        onPressed:
+                                                                            () {
+                                                                          Navigator.push(
+                                                                              context,
+                                                                              MaterialPageRoute(builder: (context) => Scale()));
+                                                                        }),
+                                                              )),
+                                                        ]),
+                                                  ]),
                                             ]),
                                       ]),
                                 ]),
