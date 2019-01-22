@@ -8,6 +8,7 @@ import 'package:flutterexample/listview.dart';
 import 'package:flutterexample/load%20screen.dart';
 import 'package:flutterexample/menubar.dart';
 import 'package:flutterexample/navigationbar.dart';
+import 'package:flutterexample/password.dart';
 import 'package:flutterexample/press%20button.dart';
 import 'package:flutterexample/radiobutton.dart';
 import 'package:flutterexample/rating.dart';
@@ -456,7 +457,33 @@ class Rais_ButtonState extends State<Rais_Button> {
                                                                             () {
                                                                           Navigator.push(
                                                                               context,
-                                                                              MaterialPageRoute(builder: (context) => Scale()));
+                                                                              MaterialPageRoute(builder: (context) => Scale1()));
+                                                                        }),
+                                                              )),
+                                                          Expanded(
+                                                              flex: 5,
+                                                              child: Container(
+                                                                margin: EdgeInsets
+                                                                    .only(
+                                                                        left:
+                                                                            5.0),
+                                                                child:
+                                                                    new RaisedButton(
+                                                                        padding:
+                                                                            const EdgeInsets.all(
+                                                                                9.0),
+                                                                        textColor:
+                                                                            Colors
+                                                                                .white,
+                                                                        color: Colors
+                                                                            .green,
+                                                                        child: Text(
+                                                                            'Password'),
+                                                                        onPressed:
+                                                                            () {
+                                                                          Navigator.push(
+                                                                              context,
+                                                                              MaterialPageRoute(builder: (context) => Password()));
                                                                         }),
                                                               )),
                                                         ]),

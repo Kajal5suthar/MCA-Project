@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class Scale extends StatefulWidget {
+class Scale1 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => ScaleState();
 }
 
-class ScaleState extends State<Scale> with SingleTickerProviderStateMixin {
+class ScaleState extends State<Scale1> with SingleTickerProviderStateMixin {
   AnimationController animationController;
   @override
   void initState() {
     super.initState();
     animationController = new AnimationController(
       vsync: this,
-      duration: new Duration(seconds: 3),
+      duration: new Duration(seconds: 5),
     );
 
     animationController.repeat();
@@ -29,7 +29,7 @@ class ScaleState extends State<Scale> with SingleTickerProviderStateMixin {
         child: new Container(
           height: 200.0,
           width: 200.0,
-          child: new Image.asset('images/a1_new.png'),
+          child: new Image.asset('images/download.png'),
         ),
         builder: (BuildContext context, Widget _widget) {
           return new Transform.scale(
