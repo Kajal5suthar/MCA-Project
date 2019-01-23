@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutterexample/forgetpassword.dart';
 import 'package:flutterexample/homedrawer.dart';
-import 'package:flutterexample/registrationpage.dart';
 
-class Password extends StatefulWidget {
+class RegistrationPage extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => PasswordState();
+  State<StatefulWidget> createState() => RegistrationPageState();
 }
 
-class PasswordState extends State<Password> {
+class RegistrationPageState extends State<RegistrationPage> {
   GlobalKey<FormState> key = new GlobalKey();
   bool passwordVisible = true;
   bool validate = false;
-  String password, Email;
+  String password, Email, name, confirmpassword;
+  TextEditingController password1 = new TextEditingController();
+  TextEditingController conf_password = new TextEditingController();
 
   @override
   void initState() {
@@ -23,7 +23,7 @@ class PasswordState extends State<Password> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Login page"),
+        title: new Text("Registration page"),
       ),
       body: new Container(
 //          padding: const EdgeInsets.all(10.0),
@@ -41,6 +41,13 @@ class PasswordState extends State<Password> {
   Widget FormUI() {
     return new Column(children: <Widget>[
       new TextFormField(
+        keyboardType: TextInputType.text,
+        decoration: new InputDecoration(
+          hintText: 'full name',
+          errorText: validate ? 'Value Can\'t Be Empty' : null,
+        ),
+      ),
+      new TextFormField(
           keyboardType:
               TextInputType.emailAddress, // Use email input type for emails.
           decoration: new InputDecoration(
@@ -51,7 +58,7 @@ class PasswordState extends State<Password> {
           }),
       new TextFormField(
         keyboardType: TextInputType.text,
-        //controller: _userPasswordController,
+        controller: password1,
         obscureText: passwordVisible,
 
         // Use email input type for emails.
@@ -75,60 +82,49 @@ class PasswordState extends State<Password> {
         ),
 
         validator: (val) => val.length < 6 ? 'Password too short.' : null,
+        onSaved: (val) => password = val,
+      ),
+      new TextFormField(
+        keyboardType: TextInputType.text,
+        controller: conf_password,
+        obscureText: passwordVisible,
+
+        // Use email input type for emails.
+        decoration: new InputDecoration(
+          labelText: 'Confirm Password',
+          suffixIcon: IconButton(
+            icon: Icon(
+              // Based on passwordVisible state choose the icon
+              passwordVisible ? Icons.visibility_off : Icons.visibility,
+              color: Theme.of(context).primaryColorDark,
+            ),
+            onPressed: () {
+              // Update the state i.e. toogle the state of passwordVisible variable
+              setState(() {
+                passwordVisible
+                    ? passwordVisible = false
+                    : passwordVisible = true;
+              });
+            },
+          ),
+        ),
+
+        validator: (val) {
+          /*if(val.length<6){
+
+          }
+          */
+          if (val != password1.text) {
+            return 'password is not matching';
+          }
+        },
       ),
       new SizedBox(height: 15.0),
       new RaisedButton(
         onPressed: sendToServer,
-        child: new Text('Login'),
+        child: new Text('submit'),
       ),
-      new Container(
-        height: 10.0,
-      ),
-      new GestureDetector(
-          child: Text('Forgot password'),
-          onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Forgotpage()));
-          }),
-      new Container(
-        height: 10.0,
-      ),
-      new GestureDetector(
-          child: Text('new user'),
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => RegistrationPage()));
-          })
-
-//      new Container(
-//        // width: screenSize.width,
-//        child: new RaisedButton(
-//          child: new Text(
-//            'Login',
-//            style: new TextStyle(color: Colors.white),
-//          ),
-//          onPressed: () {
-//            Navigator.push(
-//                context, MaterialPageRoute(builder: (context) => Loginpage()));
-//          },
-//          color: Colors.blue,
-//        ),
-//        margin: new EdgeInsets.only(top: 20.0),
-//      )
     ]);
-
-//            new FlatButton(
-////                onPressed: toggle,
-////                child: new Text(obscureText ? "Show" : "Hide")
-//              shape: new RoundedRectangleBorder(
-//                  borderRadius: new BorderRadius.circular(20.0)),
-//              splashColor: Colors.grey,
-//              color: Colors.grey,
-//              child : new IconButton(icon: new Icon(Icons.remove_red_eye),
-//
-//              ),
-    //             onPressed: toggle,
-//            )
   }
 
   String validateEmail(String value) {
