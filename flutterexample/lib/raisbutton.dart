@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterexample/calendar.dart';
 import 'package:flutterexample/checklist.dart';
 import 'package:flutterexample/dialog_box.dart';
 import 'package:flutterexample/dropdown%20list.dart';
@@ -14,6 +15,7 @@ import 'package:flutterexample/radiobutton.dart';
 import 'package:flutterexample/rating.dart';
 import 'package:flutterexample/rotationAnimation.dart';
 import 'package:flutterexample/scale%20animation.dart';
+import 'package:flutterexample/simple%20calculater.dart';
 import 'package:flutterexample/sliderscreen/sliderscreen.dart';
 import 'package:flutterexample/snackbar.dart';
 import 'package:flutterexample/switchprogram.dart';
@@ -486,6 +488,62 @@ class Rais_ButtonState extends State<Rais_Button> {
                                                                               MaterialPageRoute(builder: (context) => Password()));
                                                                         }),
                                                               )),
+                                                          Expanded(
+                                                              flex: 5,
+                                                              child: Container(
+                                                                margin: EdgeInsets
+                                                                    .only(
+                                                                        left:
+                                                                            5.0),
+                                                                child:
+                                                                    new RaisedButton(
+                                                                        padding:
+                                                                            const EdgeInsets.all(
+                                                                                9.0),
+                                                                        textColor:
+                                                                            Colors
+                                                                                .white,
+                                                                        color: Colors
+                                                                            .green,
+                                                                        child: Text(
+                                                                            'Picker'),
+                                                                        onPressed:
+                                                                            () {
+                                                                          Navigator.push(
+                                                                              context,
+                                                                              MaterialPageRoute(builder: (context) => CalendarExample()));
+                                                                        }),
+                                                              )),
+                                                        ]),
+                                                    new Column(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .center,
+                                                        children: <Widget>[
+                                                          new Row(
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .center,
+                                                              children: <
+                                                                  Widget>[
+                                                                Expanded(
+                                                                    flex: 5,
+                                                                    child:
+                                                                        Container(
+                                                                      margin: EdgeInsets.only(
+                                                                          left:
+                                                                              5.0),
+                                                                      child: new RaisedButton(
+                                                                          padding: const EdgeInsets.all(9.0),
+                                                                          textColor: Colors.white,
+                                                                          color: Colors.green,
+                                                                          child: Text('Simple calculater'),
+                                                                          onPressed: () {
+                                                                            Navigator.push(context,
+                                                                                MaterialPageRoute(builder: (context) => SampleCalculator()));
+                                                                          }),
+                                                                    )),
+                                                              ]),
                                                         ]),
                                                   ]),
                                             ]),

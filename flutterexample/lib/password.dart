@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterexample/forgetpassword.dart';
 import 'package:flutterexample/homedrawer.dart';
+import 'package:flutterexample/layoutpage.dart';
 import 'package:flutterexample/registrationpage.dart';
 
 class Password extends StatefulWidget {
@@ -149,7 +150,7 @@ class PasswordState extends State<Password> {
       // No any error in validation
       key.currentState.save();
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => HomeScreen()));
+          context, MaterialPageRoute(builder: (context) => LayoutPage()));
       print("Email $Email");
     } else {
       // validation error

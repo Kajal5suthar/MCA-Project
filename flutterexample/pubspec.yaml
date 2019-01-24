@@ -20,8 +20,8 @@ dependencies:
   flutter_calendar: ^0.0.8
   flutter_rating: ^0.0.2
   loadmore: ^1.0.2
-
-  # The following adds the Cupertino Icons font to your application.
+  datetime_picker_formfield: ^0.1.8
+    # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
 
@@ -44,8 +44,10 @@ flutter:
   assets:
     - images/a1_new.png
     - images/1.png
+    - images/2.png
+    - images/3.png
     - images/download.png
-    - images/images.jpg
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
