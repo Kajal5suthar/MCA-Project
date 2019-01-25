@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterexample/calculator.dart';
 import 'package:flutterexample/calendar.dart';
 import 'package:flutterexample/checklist.dart';
 import 'package:flutterexample/dialog_box.dart';
@@ -541,6 +542,23 @@ class Rais_ButtonState extends State<Rais_Button> {
                                                                           onPressed: () {
                                                                             Navigator.push(context,
                                                                                 MaterialPageRoute(builder: (context) => SampleCalculator()));
+                                                                          }),
+                                                                    )),
+                                                                Expanded(
+                                                                    flex: 5,
+                                                                    child:
+                                                                        Container(
+                                                                      margin: EdgeInsets.only(
+                                                                          left:
+                                                                              5.0),
+                                                                      child: new RaisedButton(
+                                                                          padding: const EdgeInsets.all(9.0),
+                                                                          textColor: Colors.white,
+                                                                          color: Colors.green,
+                                                                          child: Text('calculater'),
+                                                                          onPressed: () {
+                                                                            Navigator.push(context,
+                                                                                MaterialPageRoute(builder: (context) => CalculatorExample()));
                                                                           }),
                                                                     )),
                                                               ]),

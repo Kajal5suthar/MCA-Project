@@ -21,6 +21,7 @@ dependencies:
   flutter_rating: ^0.0.2
   loadmore: ^1.0.2
   datetime_picker_formfield: ^0.1.8
+  flight_co2_calculator_flutter: ^0.0.1
     # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
