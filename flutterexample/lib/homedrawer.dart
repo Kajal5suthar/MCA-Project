@@ -56,9 +56,42 @@ class _HomeScreenState extends State<HomeScreen> {
       drawer: new Drawer(
         child: new Column(
           children: <Widget>[
+            new Row(
+              children: <Widget>[
+                new Container(
+                  alignment: Alignment.center,
+                  margin: new EdgeInsets.only(left: 30.0),
+                )
+              ],
+            ),
             new UserAccountsDrawerHeader(
-                accountName: new Text("Language"), accountEmail: null),
-            new Column(children: drawerOptions)
+              decoration: BoxDecoration(color: Colors.white),
+              currentAccountPicture: new CircleAvatar(
+                //radius: 60.0,
+                backgroundColor: const Color(0xFF778899),
+
+                child: new Image.asset(
+                  'images/download.png',
+                ),
+                //For Image Asset
+              ),
+              accountName: new Container(
+                child: Text(
+                  'Name',
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
+              accountEmail: new Container(
+                child: Text(
+                  'Email',
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ),
+              onDetailsPressed: () {},
+            ),
+//            new UserAccountsDrawerHeader(
+//                accountName: new Text("Language"), accountEmail: null),
+            new Column(children: drawerOptions),
           ],
         ),
       ),
