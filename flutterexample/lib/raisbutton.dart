@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterexample/bottomsheet.dart';
 import 'package:flutterexample/calculator.dart';
 import 'package:flutterexample/calendar.dart';
 import 'package:flutterexample/checklist.dart';
@@ -20,6 +21,7 @@ import 'package:flutterexample/scale%20animation.dart';
 import 'package:flutterexample/simple%20calculater.dart';
 import 'package:flutterexample/sliderscreen/sliderscreen.dart';
 import 'package:flutterexample/snackbar.dart';
+import 'package:flutterexample/stepper.dart';
 import 'package:flutterexample/switchprogram.dart';
 import 'package:flutterexample/tabbar.dart';
 
@@ -117,6 +119,23 @@ class Rais_ButtonState extends State<Rais_Button> {
                                             MaterialPageRoute(
                                                 builder: (context) =>
                                                     Image_Slide()));
+                                      }),
+                                )),
+                            Expanded(
+                                flex: 5,
+                                child: Container(
+                                  margin: EdgeInsets.only(left: 5.0),
+                                  child: new RaisedButton(
+                                      padding: const EdgeInsets.all(9.0),
+                                      textColor: Colors.white,
+                                      color: Colors.green,
+                                      child: Text('iconButton'),
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    ButtonBar()));
                                       }),
                                 )),
                             Expanded(
@@ -579,6 +598,46 @@ class Rais_ButtonState extends State<Rais_Button> {
                                                                                 MaterialPageRoute(builder: (context) => ImageList()));
                                                                           }),
                                                                     )),
+                                                              ]),
+                                                          new Column(
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .center,
+                                                              children: <
+                                                                  Widget>[
+                                                                new Row(
+                                                                    mainAxisAlignment:
+                                                                        MainAxisAlignment
+                                                                            .center,
+                                                                    children: <
+                                                                        Widget>[
+                                                                      Expanded(
+                                                                        flex: 5,
+                                                                        child: Container(
+                                                                            margin: EdgeInsets.only(left: 5.0),
+                                                                            child: new RaisedButton(
+                                                                                padding: const EdgeInsets.all(9.0),
+                                                                                textColor: Colors.white,
+                                                                                color: Colors.green,
+                                                                                child: Text('stepper'),
+                                                                                onPressed: () {
+                                                                                  Navigator.push(context, MaterialPageRoute(builder: (context) => StepperExample()));
+                                                                                })),
+                                                                      ),
+                                                                      Expanded(
+                                                                        flex: 5,
+                                                                        child: Container(
+                                                                            margin: EdgeInsets.only(left: 5.0),
+                                                                            child: new RaisedButton(
+                                                                                padding: const EdgeInsets.all(9.0),
+                                                                                textColor: Colors.white,
+                                                                                color: Colors.green,
+                                                                                child: Text('BottomShet'),
+                                                                                onPressed: () {
+                                                                                  Navigator.push(context, MaterialPageRoute(builder: (context) => BottomSheet1()));
+                                                                                })),
+                                                                      ),
+                                                                    ]),
                                                               ]),
                                                         ]),
                                                   ]),
