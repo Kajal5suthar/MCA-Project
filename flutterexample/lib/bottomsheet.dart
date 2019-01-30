@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BottomSheet1 extends StatefulWidget {
-  BottomSheet1({Key key, this.title}) : super(key: key);
   final String title;
+  BottomSheet1({Key key, this.title}) : super(key: key);
 
   @override
   State createState() => BottomState();
@@ -14,8 +14,8 @@ class BottomState extends State<BottomSheet1> {
     // TODO: implement build
     return new Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
-      ),
+          //  title: Text(widget.title),
+          ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           settingModalBottomSheet(context);

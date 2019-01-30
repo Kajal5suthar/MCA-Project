@@ -22,14 +22,17 @@ class List_view extends StatelessWidget {
         ),
         body: ListView(
           children: <Widget>[
+            new Divider(),
             ListTile(
               leading: Icon(Icons.map),
               title: Text('Map'),
             ),
+            new Divider(),
             ListTile(
               leading: Icon(Icons.apps),
               title: Text('Album'),
             ),
+            new Divider(),
             ListTile(
               leading: Icon(Icons.phone),
               title: Text('Phone'),

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
-class LoadScreen extends StatefulWidget {
-  LoadScreen({Key key, this.title}) : super(key: key);
-
+class LoadScreen1 extends StatefulWidget {
   final String title;
+  LoadScreen1({Key key, this.title}) : super(key: key);
 
   @override
   State createState() => new LoadScreenState();
 }
 
-class LoadScreenState extends State<LoadScreen> {
+class LoadScreenState extends State<LoadScreen1> {
   bool loading = false;
 
   void onLoading() {
@@ -103,8 +102,8 @@ class LoadScreenState extends State<LoadScreen> {
 
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text(widget.title),
-      ),
+          // title: new Text(widget.title),
+          ),
       body: new Container(
           decoration: new BoxDecoration(color: Colors.blue[200]),
           child: loading ? bodyProgress : body),
