@@ -31,7 +31,7 @@ class FadeTransitionState extends State<FadeTransitionExample> {
             visible = !visible;
           });
         },
-        tooltip: 'Toggle Opacity',
+        //tooltip: 'Toggle Opacity',
         child: Icon(Icons.flip),
       ),
     );

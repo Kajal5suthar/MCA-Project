@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterexample/animationExample2.dart';
 import 'package:flutterexample/backgroundimage.dart';
 import 'package:flutterexample/bottomsheet.dart';
 import 'package:flutterexample/buttonBarexmple.dart';
@@ -6,6 +7,7 @@ import 'package:flutterexample/calculator.dart';
 import 'package:flutterexample/calendar.dart';
 import 'package:flutterexample/cardExample.dart';
 import 'package:flutterexample/checklist.dart';
+import 'package:flutterexample/cupertinoAction/Actionsheet.dart';
 import 'package:flutterexample/datatableexample.dart';
 import 'package:flutterexample/decorationboxtransition.dart';
 import 'package:flutterexample/dialog_box.dart';
@@ -34,6 +36,7 @@ import 'package:flutterexample/snackbar.dart';
 import 'package:flutterexample/stepper.dart';
 import 'package:flutterexample/switchprogram.dart';
 import 'package:flutterexample/tabbar.dart';
+import 'package:flutterexample/transformexample.dart';
 
 class Rais_Button extends StatefulWidget {
   @override
@@ -786,6 +789,49 @@ class Rais_ButtonState extends State<Rais_Button> {
                                                                                             Navigator.push(context, MaterialPageRoute(builder: (context) => DecorationboxExample()));
                                                                                           })),
                                                                                 ),
+                                                                                Expanded(
+                                                                                  flex: 5,
+                                                                                  child: Container(
+                                                                                      margin: EdgeInsets.only(left: 5.0),
+                                                                                      child: new RaisedButton(
+                                                                                          padding: const EdgeInsets.all(9.0),
+                                                                                          textColor: Colors.white,
+                                                                                          color: Colors.green,
+                                                                                          child: Text('ActionSheet'),
+                                                                                          onPressed: () {
+                                                                                            Navigator.push(context, MaterialPageRoute(builder: (context) => ActionSheetExmaple()));
+                                                                                          })),
+                                                                                ),
+                                                                              ]),
+                                                                              new Column(crossAxisAlignment: CrossAxisAlignment.center, children: <Widget>[
+                                                                                new Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+                                                                                  Expanded(
+                                                                                    flex: 5,
+                                                                                    child: Container(
+                                                                                        margin: EdgeInsets.only(left: 5.0),
+                                                                                        child: new RaisedButton(
+                                                                                            padding: const EdgeInsets.all(9.0),
+                                                                                            textColor: Colors.white,
+                                                                                            color: Colors.green,
+                                                                                            child: Text('ANIMATION1'),
+                                                                                            onPressed: () {
+                                                                                              Navigator.push(context, MaterialPageRoute(builder: (context) => AnimationExample()));
+                                                                                            })),
+                                                                                  ),
+                                                                                  Expanded(
+                                                                                    flex: 5,
+                                                                                    child: Container(
+                                                                                        margin: EdgeInsets.only(left: 5.0),
+                                                                                        child: new RaisedButton(
+                                                                                            padding: const EdgeInsets.all(9.0),
+                                                                                            textColor: Colors.white,
+                                                                                            color: Colors.green,
+                                                                                            child: Text('ANIMATION2'),
+                                                                                            onPressed: () {
+                                                                                              Navigator.push(context, MaterialPageRoute(builder: (context) => Animation2()));
+                                                                                            })),
+                                                                                  ),
+                                                                                ]),
                                                                               ]),
                                                                             ]),
                                                                           ]),
